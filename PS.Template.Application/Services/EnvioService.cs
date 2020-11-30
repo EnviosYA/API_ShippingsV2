@@ -98,7 +98,7 @@ namespace PS.Template.Application.Services
             }
 
             var entityEnvio = new Envio {
-                IdUserOrigen = ObtenerIdDirUser(envio.idUsuario),
+                IdUserOrigen =  envio.idUsuario,
                 IdDireccionDestino = ObtenerIdDirDestino(envio.DireccionDestino),
                 Costo = costo
             };
