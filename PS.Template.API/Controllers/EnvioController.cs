@@ -42,7 +42,8 @@ namespace PS.Template.API.Controllers
                 }
                 else
                 {
-                    return BadRequest("No existe el envío o el usuario no tiene envíos");
+                    ResponseGETEnviosDTO respuesta = new ResponseGETEnviosDTO(400,"No existen envios con ese Id");
+                    return new JsonResult(respuesta) { StatusCode = 400 };
                 }
 
             }

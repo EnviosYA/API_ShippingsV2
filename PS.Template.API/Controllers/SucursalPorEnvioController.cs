@@ -2,6 +2,7 @@
 using PS.Template.Domain.DTO;
 using PS.Template.Domain.Interfaces.Service;
 using System;
+using TP2.REST.Domain.DTO;
 
 namespace PS.Template.API.Controllers
 {
@@ -38,7 +39,7 @@ namespace PS.Template.API.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                return new JsonResult(new GenericCreatedResponseDTO() { Entity = "Sucursal Por Envio", Id = "0"}) { StatusCode = 400 };
             }
         }
     }

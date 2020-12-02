@@ -242,7 +242,7 @@ namespace PS.Template.Application.Services
             List<ResponsePaqueteDto> paquetes;
             ResponseGetDireccion direccion;
             List<ResponseEnvioCompleto> envioCompleto = new List<ResponseEnvioCompleto>();
-            if (envios != null)
+            if (envios.Count > 0)
             {
                 foreach (ResponseEnvioDto envio in envios)
                 {
