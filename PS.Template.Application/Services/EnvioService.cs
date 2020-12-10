@@ -68,7 +68,7 @@ namespace PS.Template.Application.Services
                 case 3:
                     // Validar que es uno solo
                     if (paquetes.Count > 1)
-                        return new ResponseRequestDto { Codigo = 400, Mensaje = "Solo puede ingresar una carta documento" };
+                        return new ResponseRequestDto { Codigo = 400, Mensaje = "Solo puede enviar una carta documento" };
                     // Validar que no ingresó peso o medidas
                     if (TienePesoOVolumen(paquetes))
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "No debe ingresar peso o medidas" };
@@ -78,7 +78,7 @@ namespace PS.Template.Application.Services
                 case 4:
                     // Validar que es uno solo
                     if (paquetes.Count > 1)
-                        return new ResponseRequestDto { Codigo = 400, Mensaje = "Solo puede ingresar una carta documento" };
+                        return new ResponseRequestDto { Codigo = 400, Mensaje = "Solo puede enviar un telegrama" };
                     // Validar que no ingresó peso o medidas
                     if (TienePesoOVolumen(paquetes))
                         return new ResponseRequestDto { Codigo = 400, Mensaje = "No debe ingresar peso o medidas" };
@@ -251,6 +251,7 @@ namespace PS.Template.Application.Services
 
                     envioCompleto.Add(new ResponseEnvioCompleto
                     {
+                        IdEnvio = envio.IdEnvio,
                         Calle = direccion.Calle,
                         Altura = direccion.Altura,
                         NombreLocalidad = direccion.NombreLocalidad,
