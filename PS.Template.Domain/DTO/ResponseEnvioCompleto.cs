@@ -4,6 +4,7 @@ namespace PS.Template.Domain.DTO
 {
     public class ResponseEnvioCompleto
     {
+        public int IdEnvio { get; set; }
         public string Calle { get; set; }
         public int Altura { get; set; }
         public string NombreLocalidad { get; set; }
